@@ -1,6 +1,6 @@
 /**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
- * @version 1.14.0
+ * @version 1.14.3
  * @license
  * Copyright (c) 2016 Federico Zivolo and contributors
  *
@@ -22,6 +22,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+	typeof define === 'function' && define.amd ? define(['exports'], factory) :
+	(factory((global.PopperUtils = {})));
+}(this, (function (exports) { 'use strict';
+
 /**
  * Get CSS computed property of the given element
  * @method
@@ -87,40 +93,27 @@ function getScrollParent(element) {
   return getScrollParent(getParentNode(element));
 }
 
+var isBrowser = typeof window !== 'undefined' && typeof document !== 'undefined';
+
+var isIE11 = isBrowser && !!(window.MSInputMethodContext && document.documentMode);
+var isIE10 = isBrowser && /MSIE 10/.test(navigator.userAgent);
+
 /**
- * Tells if you are running Internet Explorer
+ * Determines if the browser is Internet Explorer
  * @method
  * @memberof Popper.Utils
- * @argument {number} version to check
+ * @param {Number} version to check
  * @returns {Boolean} isIE
  */
-var cache = {};
-
-var isIE = function () {
-  var version = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'all';
-
-  version = version.toString();
-  if (cache.hasOwnProperty(version)) {
-    return cache[version];
+function isIE(version) {
+  if (version === 11) {
+    return isIE11;
   }
-  switch (version) {
-    case '11':
-      cache[version] = navigator.userAgent.indexOf('Trident') !== -1;
-      break;
-    case '10':
-      cache[version] = navigator.appVersion.indexOf('MSIE 10') !== -1;
-      break;
-    case 'all':
-      cache[version] = navigator.userAgent.indexOf('Trident') !== -1 || navigator.userAgent.indexOf('MSIE') !== -1;
-      break;
+  if (version === 10) {
+    return isIE10;
   }
-
-  //Set IE
-  cache.all = cache.all || Object.keys(cache).some(function (key) {
-    return cache[key];
-  });
-  return cache[version];
-};
+  return isIE11 || isIE10;
+}
 
 /**
  * Returns the offset parent of the given element
@@ -629,7 +622,6 @@ function computeAutoPlacement(placement, refRect, popper, reference, boundariesE
   return computedPlacement + (variation ? '-' + variation : '');
 }
 
-var isBrowser = typeof window !== 'undefined' && typeof document !== 'undefined';
 var longerTimeoutBrowsers = ['Edge', 'Trident', 'Firefox'];
 var timeoutDuration = 0;
 for (var i = 0; i < longerTimeoutBrowsers.length; i += 1) {
@@ -1102,6 +1094,38 @@ var index = {
   setupEventListeners: setupEventListeners
 };
 
-export { computeAutoPlacement, debounce, findIndex, getBordersSize, getBoundaries, getBoundingClientRect, getClientRect, getOffsetParent, getOffsetRect, getOffsetRectRelativeToArbitraryNode, getOuterSizes, getParentNode, getPopperOffsets, getReferenceOffsets, getScroll, getScrollParent, getStyleComputedProperty, getSupportedPropertyName, getWindowSizes, isFixed, isFunction, isModifierEnabled, isModifierRequired, isNumeric, removeEventListeners, runModifiers, setAttributes, setStyles, setupEventListeners };
-export default index;
+exports.computeAutoPlacement = computeAutoPlacement;
+exports.debounce = debounce;
+exports.findIndex = findIndex;
+exports.getBordersSize = getBordersSize;
+exports.getBoundaries = getBoundaries;
+exports.getBoundingClientRect = getBoundingClientRect;
+exports.getClientRect = getClientRect;
+exports.getOffsetParent = getOffsetParent;
+exports.getOffsetRect = getOffsetRect;
+exports.getOffsetRectRelativeToArbitraryNode = getOffsetRectRelativeToArbitraryNode;
+exports.getOuterSizes = getOuterSizes;
+exports.getParentNode = getParentNode;
+exports.getPopperOffsets = getPopperOffsets;
+exports.getReferenceOffsets = getReferenceOffsets;
+exports.getScroll = getScroll;
+exports.getScrollParent = getScrollParent;
+exports.getStyleComputedProperty = getStyleComputedProperty;
+exports.getSupportedPropertyName = getSupportedPropertyName;
+exports.getWindowSizes = getWindowSizes;
+exports.isFixed = isFixed;
+exports.isFunction = isFunction;
+exports.isModifierEnabled = isModifierEnabled;
+exports.isModifierRequired = isModifierRequired;
+exports.isNumeric = isNumeric;
+exports.removeEventListeners = removeEventListeners;
+exports.runModifiers = runModifiers;
+exports.setAttributes = setAttributes;
+exports.setStyles = setStyles;
+exports.setupEventListeners = setupEventListeners;
+exports['default'] = index;
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+})));
 //# sourceMappingURL=popper-utils.js.map
