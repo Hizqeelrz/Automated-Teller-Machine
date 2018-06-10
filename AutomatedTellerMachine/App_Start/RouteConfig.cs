@@ -15,7 +15,7 @@ namespace AutomatedTellerMachine
 
             routes.MapRoute(
                 name: "Serial Number",
-                url: "serial/{letterase}",
+                url: "serial",
                 defaults: new { controller = "Home", action = "Serial", letterCase = "upper" }
             );
 

@@ -35,7 +35,9 @@ namespace AutomatedTellerMachine.Controllers
                 return Content(serial.ToLower());
             }
 
-            return Content(serial);
+           // return Content(serial);
+
+            return Json(new { name = "Serial", value = serial }, JsonRequestBehavior.AllowGet);
         }
     }
 }
