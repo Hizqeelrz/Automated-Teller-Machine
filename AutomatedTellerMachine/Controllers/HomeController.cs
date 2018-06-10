@@ -8,8 +8,11 @@ namespace AutomatedTellerMachine.Controllers
 {
     public class HomeController : Controller
     {
+        // Attribute is not specified afer MyLoggingFilter because LoggingFilter.cs file is executing that method
+        [MyLoggingFilter]
         public ActionResult Index()
         {
+            throw new StackOverflowException();
             return View();
         }
 
