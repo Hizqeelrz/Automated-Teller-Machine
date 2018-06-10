@@ -22,10 +22,20 @@ namespace AutomatedTellerMachine.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.TheMessage = "Having Trouble? Send us a message";
 
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Contact(string message)
+        {
+            //TODO: Send message to HQ
+            ViewBag.TheMessage = "Thanks we got your message";
+
+            return View();
+        }
+
 
         public ActionResult Serial(string letterCase)
         {
