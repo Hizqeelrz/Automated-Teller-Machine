@@ -50,7 +50,9 @@ namespace AutomatedTellerMachine.Controllers
 
            // return Content(serial);
 
-            return Json(new { name = "Serial", value = serial }, JsonRequestBehavior.AllowGet);
+          // return Json(new { name = "Serial", value = serial }, JsonRequestBehavior.AllowGet);
+
+            return RedirectToAction("Index");
         }
     }
 }
