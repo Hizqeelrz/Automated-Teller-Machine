@@ -32,7 +32,6 @@ c:\Users\HP\Documents\Visual Studio 2013\Projects\AutomatedTellerMachine\Automat
 c:\Users\HP\Documents\Visual Studio 2013\Projects\AutomatedTellerMachine\AutomatedTellerMachine.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
 c:\Users\HP\Documents\Visual Studio 2013\Projects\AutomatedTellerMachine\AutomatedTellerMachine.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 c:\Users\HP\Documents\Visual Studio 2013\Projects\AutomatedTellerMachine\AutomatedTellerMachine.Tests\bin\Debug\System.Web.Optimization.xml
-c:\Users\HP\Documents\Visual Studio 2013\Projects\AutomatedTellerMachine\AutomatedTellerMachine.Tests\bin\Debug\Microsoft.Owin.xml
 c:\Users\HP\Documents\Visual Studio 2013\Projects\AutomatedTellerMachine\AutomatedTellerMachine.Tests\bin\Debug\EntityFramework.xml
 c:\Users\HP\Documents\Visual Studio 2013\Projects\AutomatedTellerMachine\AutomatedTellerMachine.Tests\bin\Debug\Microsoft.Owin.Security.xml
 c:\Users\HP\Documents\Visual Studio 2013\Projects\AutomatedTellerMachine\AutomatedTellerMachine.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml

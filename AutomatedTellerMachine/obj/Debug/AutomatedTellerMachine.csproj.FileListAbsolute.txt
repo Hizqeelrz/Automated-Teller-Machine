@@ -30,7 +30,6 @@ c:\Users\HP\Documents\Visual Studio 2013\Projects\AutomatedTellerMachine\Automat
 c:\Users\HP\Documents\Visual Studio 2013\Projects\AutomatedTellerMachine\AutomatedTellerMachine\bin\Antlr3.Runtime.pdb
 c:\Users\HP\Documents\Visual Studio 2013\Projects\AutomatedTellerMachine\AutomatedTellerMachine\bin\EntityFramework.xml
 c:\Users\HP\Documents\Visual Studio 2013\Projects\AutomatedTellerMachine\AutomatedTellerMachine\bin\EntityFramework.SqlServer.xml
-c:\Users\HP\Documents\Visual Studio 2013\Projects\AutomatedTellerMachine\AutomatedTellerMachine\bin\Microsoft.Owin.xml
 c:\Users\HP\Documents\Visual Studio 2013\Projects\AutomatedTellerMachine\AutomatedTellerMachine\bin\Microsoft.Owin.Security.Facebook.xml
 c:\Users\HP\Documents\Visual Studio 2013\Projects\AutomatedTellerMachine\AutomatedTellerMachine\bin\Newtonsoft.Json.xml
 c:\Users\HP\Documents\Visual Studio 2013\Projects\AutomatedTellerMachine\AutomatedTellerMachine\bin\System.Web.Helpers.xml
