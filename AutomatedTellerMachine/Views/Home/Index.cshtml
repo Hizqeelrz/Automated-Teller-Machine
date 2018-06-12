@@ -3,24 +3,17 @@
     //Layout = "MyLayout.cshtml";
 }
 <br />
-<div class="jumbotron">
-    <h1>Middle Valley Community Bank</h1>
-    <p class="lead">Middle Valley Community Bank Offers First-Ever Web based ATM. Give it a Try!</p>
-    <p><a href="http://asp.net" class="btn btn-outline-primary btn-lg">Powered by ASP.NET</a></p>
-</div>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Register</h2>
-        <p>
-            Open an Account with us!
-        </p>
-        <p>@Html.ActionLink("Register", "Register", "Account", null, new { @class = "btn btn-outline-secondary"})</p>
+    <div class="col-md-6 margin-top-20">
+        <a href="#" class="btn btn-outline-primary btn-lg btn-block"><span class="fa fa-arrow-down"></span> Withdrawal</a>
+        <a href="#" class="btn btn-outline-primary btn-lg btn-block"><span class="fa fa-dollar"></span> Quick Cash $100</a>
+        <a href="#" class="btn btn-outline-primary btn-lg btn-block"><span class="fa fa-question"></span> Balance Inquiry</a>
     </div>
-    <div class="col-md-4">
-        <h2>Log in</h2>
-        <p>Access your existing Account Here!</p>
-        <p>@Html.ActionLink("Log in", "Register", "Account", null, new { @class="btn btn-outline-secondary"})</p>
+    <div class="col-md-6 margin-top-20" >
+        <a href="#" class="btn btn-outline-primary btn-lg btn-block"><span class="fa fa-print"></span> Print Statement</a>
+        <a href="#" class="btn btn-outline-primary btn-lg btn-block"><span class="fa fa-money"></span> Transfer Funds</a>
+        <a href="#" class="btn btn-outline-primary btn-lg btn-block"><span class="fa fa-arrow-up"></span> Deposit</a>
     </div>
 </div>
 
@@ -30,8 +23,12 @@ Email me at example@mvc.com if you have any problem. or send me a tweet @@hizqee
 *@
 @*m is used here as suffix so that the doubles in the decimal are not used or treated as doubles.*@
 
-@{var amounts = new List<Decimal>{100, 25.50m, -40, 278.65m};}
 @*
+@{var amounts = new List<Decimal>{100, 25.50m, -40, 278.65m};}
+*@
+
+@*
+
 <ul>
     <br />
     @foreach (decimal amount in amounts)
