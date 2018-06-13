@@ -1,0 +1,2 @@
+special-vendored-path/* linguist-packages
+jquery.js linguist-packages=false
