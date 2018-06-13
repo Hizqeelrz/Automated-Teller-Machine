@@ -1,2 +1,4 @@
-special-vendored-path/* linguist-packages
-jquery.js linguist-packages=false
+packages linguist-generated=true
+packages linguist-generated=true
+*linguist-vendored
+*.cs linguist-vendored=false
