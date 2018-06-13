@@ -1,2 +1,2 @@
-*linguist-vendored
-*.cs linguist-vendored=false
+/HP/Documentation/Visual\Studio\2013/Projects/AutomatedTellerMachine/packages linguist-vendored
+*.js linguist-vendored=true
