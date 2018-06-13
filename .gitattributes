@@ -1,4 +1,2 @@
-packages linguist-generated=true
-packages linguist-generated=true
 *linguist-vendored
 *.cs linguist-vendored=false
