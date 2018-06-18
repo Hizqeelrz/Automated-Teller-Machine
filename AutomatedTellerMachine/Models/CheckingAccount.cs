@@ -34,5 +34,12 @@ namespace AutomatedTellerMachine.Models
 
         [DataType(DataType.Currency)]
         public decimal Balance { get; set; }
+
+        // Added the property that will be reference to the User that will hold the account, this will automatically implemented with a foreign key that refernces the User table when data base is generated making it a virtual property allow to override by the framework with a mechinsism that sypports lazy loading of this related object
+        public virtual ApplicationUser User { get; set; }
+
+
+        // implemented Id property of the ApplicationUser
+        public string ApplicationUserId { get; set; }
     }
 }
