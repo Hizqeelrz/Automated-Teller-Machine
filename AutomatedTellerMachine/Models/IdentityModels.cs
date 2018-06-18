@@ -29,5 +29,11 @@ namespace AutomatedTellerMachine.Models
         {
             return new ApplicationDbContext();
         }
+
+
+        /// <summary>
+        /// This will allow us to work directly with checking account table which will be created in the database
+        /// </summary>
+        public DbSet<CheckingAccount> CheckingAccounts { get; set; }
     }
 }
